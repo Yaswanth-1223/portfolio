@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Yaswanth S S</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #111827;
+            background-color: #f9fafb;
+            line-height: 1.5;
+            padding: 2rem;
+        }
+
+        .resume-page {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+        }
+
+        header {
+            border-bottom: 2px solid #10b981;
+            padding-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #064e3b;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .contact-bar a {
+            color: #059669;
+            text-decoration: none;
+        }
+
+        section {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #0f172a;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 0.3rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        p, ul {
+            font-size: 0.93rem;
+            color: #374151;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .item-sub {
+            color: #6b7280;
+            font-size: 0.88rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .action-bar {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn-print {
+            background: #10b981;
+            color: #ffffff;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-print:hover {
+            background: #059669;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume-page {
+                box-shadow: none;
+                padding: 0;
+            }
+            .action-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="action-bar">
+        <button onclick="window.print()" class="btn-print">🖨️ Save as PDF / Print Resume</button>
+    </div>
+
+    <div class="resume-page">
+        <header>
+            <h1>YASWANTH S S</h1>
+            <div class="subtitle">B.E. COMPUTER SCIENCE AND ENGINEERING</div>
+            <div class="contact-bar">
+                <span><strong>Email:</strong> <a href="mailto:yaswxnth0912@gmail.com">yaswxnth0912@gmail.com</a></span>
+                <span><strong>Phone:</strong> +91 9384915147</span>
+                <span><strong>Location:</strong> Coimbatore, Tamil Nadu, India</span>
+            </div>
+            <div class="contact-bar" style="margin-top: 0.4rem;">
+                <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yaswanth-ss-271593386" target="_blank">linkedin.com/in/yaswanth-ss-271593386</a></span>
+                <span><strong>GitHub:</strong> <a href="https://github.com/Yaswanth-1223" target="_blank">github.com/Yaswanth-1223</a></span>
+            </div>
+        </header>
+
+        <section>
+            <h2>CAREER OBJECTIVE</h2>
+            <p>I am a Computer Science and Engineering student with a strong foundation in Java, Python, C, C++, HTML, and SQL. I am passionate about developing innovative software solutions and continuously learning new technologies. I am a quick learner, a collaborative team player, and eager to contribute my technical and problem-solving skills to a dynamic organization.</p>
+        </section>
+
+        <section>
+            <h2>EDUCATION</h2>
+            <div style="margin-bottom: 0.8rem;">
+                <div class="item-header">
+                    <span>Bachelor of Engineering in Computer Science and Engineering</span>
+                    <span>2024 - 2028</span>
+                </div>
+                <div class="item-sub">Dr. N.G.P. Institute of Technology, Coimbatore</div>
+                <p><strong>CGPA:</strong> 7.5 / 10</p>
+            </div>
+
+            <div style="margin-bottom: 0.8rem;">
+                <div class="item-header">
+                    <span>Higher Secondary (12th Grade)</span>
+                    <span>2023 - 2024</span>
+                </div>
+                <div class="item-sub">Velalar Vidhyallayaa Senior Secondary School, Erode</div>
+                <p><strong>Percentage:</strong> 71%</p>
+            </div>
+
+            <div>
+                <div class="item-header">
+                    <span>Secondary School (10th Grade)</span>
+                    <span>2021 - 2022</span>
+                </div>
+                <div class="item-sub">Velalar Vidhyallayaa Senior Secondary School, Erode</div>
+                <p><strong>Percentage:</strong> 65.4%</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>TECHNICAL SKILLS</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Java, Python, C, C++</li>
+                <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Database:</strong> SQL, DBMS</li>
+                <li><strong>Tools & Platforms:</strong> Git, GitHub, VS Code</li>
+                <li><strong>Core CS Subjects:</strong> Data Structures, DBMS, Operating Systems</li>
+                <li><strong>Soft Skills:</strong> Problem Solving, Teamwork, Communication Skills, Time Management, Quick Learner, Adaptability</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>PROJECTS</h2>
+            <div style="margin-bottom: 0.8rem;">
+                <div class="item-header">
+                    <span>1. Plant Health Monitoring System</span>
+                </div>
+                <ul>
+                    <li>Developed a system to monitor plant health using sensor-based technology.</li>
+                    <li>Enabled real-time monitoring of environmental conditions for better plant growth.</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="item-header">
+                    <span>2. Virtual Voice Identity Vault</span>
+                </div>
+                <ul>
+                    <li>Developed a secure voice-based identity verification system.</li>
+                    <li>Focused on improving authentication security using voice recognition techniques.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>INTERNSHIP EXPERIENCE</h2>
+            <div class="item-header">
+                <span>Web Development Intern</span>
+                <span>NxtLogic Software Solutions</span>
+            </div>
+            <ul>
+                <li>Worked on developing responsive web applications.</li>
+                <li>Gained practical experience in frontend development and version control using Git.</li>
+                <li>Collaborated with team members to build user-friendly interfaces.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>CERTIFICATIONS & ACHIEVEMENTS</h2>
+            <ul>
+                <li><strong>NPTEL - Internet of Things:</strong> Silver + Elite Certification</li>
+                <li><strong>IoT in Edge Computing:</strong> Specialized Certification</li>
+                <li><strong>Technical Paper Presentation:</strong> Presented a research paper at KIT, Coimbatore.</li>
+                <li><strong>Competitive Coding:</strong> Solved coding problems on LeetCode.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>LANGUAGES</h2>
+            <p>English (Fluent) • Tamil (Fluent) • Telugu (Fluent)</p>
+        </section>
+    </div>
+
+</body>
+</html>

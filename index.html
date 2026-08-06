@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaswanth S S | Software Engineer & Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Yaswanth S S, B.E. Computer Science & Engineering Student, Web Developer, and IoT Enthusiast from Coimbatore, India.">
+    <meta name="keywords" content="Yaswanth S S, Portfolio, Web Developer, Software Engineer, Java, Python, C++, SQL, Coimbatore">
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Animated Canvas Ambient Background -->
+    <canvas id="ambient-particles"></canvas>
+
+    <!-- Navigation Bar -->
+    <header class="navbar-container" id="navbar">
+        <div class="nav-content">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-code">&lt;</span>
+                <span class="logo-name">Yaswanth</span>
+                <span class="logo-dot">.dev</span>
+                <span class="logo-code">/&gt;</span>
+            </a>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#education" class="nav-item">Education</a>
+                <a href="#terminal" class="nav-item terminal-link"><i class="fa-solid fa-terminal"></i> Terminal</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm" id="btn-open-resume" onclick="openResumeModal()">
+                    <i class="fa-solid fa-file-pdf"></i> Resume
+                </button>
+                <a href="tel:+919384915147" class="btn btn-primary btn-sm nav-call-btn">
+                    <i class="fa-solid fa-phone"></i> Call
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text-content">
+                    <div class="status-badge glow-pulse">
+                        <span class="status-dot"></span>
+                        <span>Available for Internships & Projects</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Yaswanth S S</span>
+                    </h1>
+
+                    <div class="typing-container">
+                        <span class="typing-prefix">I am a </span>
+                        <span id="typing-text" class="typing-highlight"></span>
+                        <span class="cursor-blink">|</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Computer Science & Engineering student passionate about crafting clean, efficient web applications, sensor-based IoT systems, and secure software solutions.
+                    </p>
+
+                    <div class="hero-location">
+                        <i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu, India
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <button onclick="downloadResume()" class="btn btn-primary btn-lg glow-effect">
+                            <i class="fa-solid fa-download"></i> Download Resume
+                        </button>
+                        <a href="mailto:yaswxnth0912@gmail.com?subject=Portfolio%20Inquiry%20from%20Website&body=Hi%20Yaswanth,%0A%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0A%0ARegards," class="btn btn-secondary btn-lg">
+                            <i class="fa-solid fa-envelope"></i> Email Me
+                        </a>
+                        <a href="tel:+919384915147" class="btn btn-outline btn-lg">
+                            <i class="fa-solid fa-phone"></i> +91 9384915147
+                        </a>
+                    </div>
+
+                    <div class="social-links-row">
+                        <span class="social-label">Connect:</span>
+                        <a href="https://www.linkedin.com/in/yaswanth-ss-271593386/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Yaswanth-1223" target="_blank" rel="noopener" class="social-btn" title="GitHub Profile">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:yaswxnth0912@gmail.com" class="social-btn" title="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="tel:+919384915147" class="social-btn" title="Call Phone">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Visual with Profile Picture Frame -->
+                <div class="hero-visual">
+                    <div class="profile-hero-card glass-panel">
+                        <!-- Profile Image Frame -->
+                        <div class="profile-img-container">
+                            <div class="profile-glow-ring"></div>
+                            <img src="image/yash port pic.jpeg" alt="Yaswanth S S" class="profile-img" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Yaswanth+S+S&background=10b981&color=000&size=200&bold=true';">
+                        </div>
+
+                        <div class="profile-meta-info">
+                            <h3 class="profile-name">Yaswanth S S</h3>
+                            <p class="profile-degree">B.E. Computer Science & Engineering</p>
+                            <div class="profile-college"><i class="fa-solid fa-building-columns"></i> Dr. N.G.P. Institute of Technology</div>
+                        </div>
+
+                        <div class="code-avatar-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-filename">yaswanth_profile.json</span>
+                        </div>
+                        <div class="code-avatar-body">
+<pre><code><span class="code-key">"developer"</span>: {
+  <span class="code-key">"email"</span>: <span class="code-string">"yaswxnth0912@gmail.com"</span>,
+  <span class="code-key">"phone"</span>: <span class="code-string">"+91 9384915147"</span>,
+  <span class="code-key">"cgpa"</span>: <span class="code-number">7.5</span>,
+  <span class="code-key">"internship"</span>: <span class="code-string">"Web Dev @ NxtLogic"</span>,
+  <span class="code-key">"core_stack"</span>: [<span class="code-string">"Java"</span>, <span class="code-string">"Python"</span>, <span class="code-string">"C++"</span>, <span class="code-string">"HTML/JS"</span>, <span class="code-string">"SQL"</span>],
+  <span class="code-key">"certifications"</span>: [<span class="code-string">"NPTEL IoT (Silver+Elite)"</span>]
+}</code></pre>
+                        </div>
+                        <div class="visual-badge-row">
+                            <div class="mini-stat-badge">
+                                <span class="stat-num">7.5</span>
+                                <span class="stat-lbl">CGPA</span>
+                            </div>
+                            <div class="mini-stat-badge">
+                                <span class="stat-num">2+</span>
+                                <span class="stat-lbl">Key Projects</span>
+                            </div>
+                            <div class="mini-stat-badge">
+                                <span class="stat-num">IoT</span>
+                                <span class="stat-lbl">Silver+Elite</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Get to know me</span>
+                    <h2 class="section-title">Career <span class="gradient-text">Objective & Background</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-panel">
+                        <div class="about-profile-header">
+                            <img src="profile.jpg" alt="Yaswanth S S" class="about-profile-thumb" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Yaswanth+S+S&background=10b981&color=000&size=100&bold=true';">
+                            <div>
+                                <h3>Yaswanth S S</h3>
+                                <p class="text-emerald">B.E. Computer Science and Engineering</p>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem;">
+                            I am a <strong>Computer Science and Engineering</strong> student with a strong foundation in Java, Python, C, C++, HTML, and SQL. I am deeply passionate about developing innovative software solutions and continuously mastering emerging web and IoT technologies.
+                        </p>
+                        <p>
+                            As a quick learner and collaborative team player, I am eager to contribute my technical and analytical problem-solving skills to a dynamic, forward-thinking organization.
+                        </p>
+                    </div>
+
+                    <div class="about-features-grid">
+                        <div class="feature-item glass-panel">
+                            <i class="fa-solid fa-code feature-icon"></i>
+                            <div>
+                                <h4>Strong Fundamentals</h4>
+                                <p>Solid foundation in Data Structures, DBMS, and Operating Systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item glass-panel">
+                            <i class="fa-solid fa-microchip feature-icon"></i>
+                            <div>
+                                <h4>IoT & Edge Computing</h4>
+                                <p>NPTEL Silver + Elite certified in IoT with sensor-based project experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item glass-panel">
+                            <i class="fa-solid fa-laptop-code feature-icon"></i>
+                            <div>
+                                <h4>Industry Experience</h4>
+                                <p>Web Development Intern experience building responsive web interfaces.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item glass-panel">
+                            <i class="fa-solid fa-language feature-icon"></i>
+                            <div>
+                                <h4>Multilingual</h4>
+                                <p>Fluent in English, Tamil, and Telugu for effective teamwork.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section dark-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Technical Proficiency</span>
+                    <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="skills-wrapper">
+                    <!-- Programming Languages -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-cat-header">
+                            <i class="fa-solid fa-terminal"></i>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skills-flex">
+                            <div class="skill-pill"><i class="fa-brands fa-java color-java"></i> Java</div>
+                            <div class="skill-pill"><i class="fa-brands fa-python color-python"></i> Python</div>
+                            <div class="skill-pill"><i class="fa-solid fa-c color-c"></i> C Language</div>
+                            <div class="skill-pill"><i class="fa-solid fa-code color-cpp"></i> C++</div>
+                        </div>
+                    </div>
+
+                    <!-- Web Technologies -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-cat-header">
+                            <i class="fa-solid fa-globe"></i>
+                            <h3>Web Technologies</h3>
+                        </div>
+                        <div class="skills-flex">
+                            <div class="skill-pill"><i class="fa-brands fa-html5 color-html"></i> HTML5</div>
+                            <div class="skill-pill"><i class="fa-brands fa-css3-alt color-css"></i> CSS3</div>
+                            <div class="skill-pill"><i class="fa-brands fa-js color-js"></i> JavaScript</div>
+                            <div class="skill-pill"><i class="fa-solid fa-mobile-screen-button"></i> Responsive Web Design</div>
+                        </div>
+                    </div>
+
+                    <!-- Database & Core CS -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-cat-header">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>Databases & Core Subjects</h3>
+                        </div>
+                        <div class="skills-flex">
+                            <div class="skill-pill"><i class="fa-solid fa-database color-sql"></i> SQL</div>
+                            <div class="skill-pill"><i class="fa-solid fa-diagram-project"></i> DBMS</div>
+                            <div class="skill-pill"><i class="fa-solid fa-sitemap"></i> Data Structures</div>
+                            <div class="skill-pill"><i class="fa-solid fa-gears"></i> Operating Systems</div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="skill-category-card glass-panel">
+                        <div class="skill-cat-header">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h3>Tools & Development</h3>
+                        </div>
+                        <div class="skills-flex">
+                            <div class="skill-pill"><i class="fa-brands fa-git-alt color-git"></i> Git</div>
+                            <div class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</div>
+                            <div class="skill-pill"><i class="fa-solid fa-code"></i> VS Code</div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-category-card glass-panel full-width">
+                        <div class="skill-cat-header">
+                            <i class="fa-solid fa-user-check"></i>
+                            <h3>Professional Soft Skills</h3>
+                        </div>
+                        <div class="soft-skills-grid">
+                            <div class="soft-skill-badge"><i class="fa-solid fa-brain"></i> Problem Solving</div>
+                            <div class="soft-skill-badge"><i class="fa-solid fa-people-group"></i> Teamwork</div>
+                            <div class="soft-skill-badge"><i class="fa-solid fa-comments"></i> Communication</div>
+                            <div class="soft-skill-badge"><i class="fa-solid fa-clock"></i> Time Management</div>
+                            <div class="soft-skill-badge"><i class="fa-solid fa-bolt"></i> Quick Learner</div>
+                            <div class="soft-skill-badge"><i class="fa-solid fa-arrows-rotate"></i> Adaptability</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Work History</span>
+                    <h2 class="section-title">Internship <span class="gradient-text">Experience</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-marker">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="role-title">Web Development Intern</h3>
+                                    <h4 class="company-name">NxtLogic Software Solutions</h4>
+                                </div>
+                                <span class="timeline-badge"><i class="fa-regular fa-calendar"></i> Internship</span>
+                            </div>
+                            <ul class="experience-bullets">
+                                <li><i class="fa-solid fa-circle-check"></i> Worked directly on developing responsive, high-performance web applications.</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Gained practical hands-on experience in frontend development and version control using Git.</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Collaborated effectively with cross-functional team members to design user-friendly web interfaces.</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Git</span>
+                                <span class="tag">Responsive UI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="section dark-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">My Portfolio Works</span>
+                    <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-panel">
+                        <div class="project-card-banner project-bg-1">
+                            <div class="project-category"><i class="fa-solid fa-leaf"></i> IoT & Sensors</div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Plant Health Monitoring System</h3>
+                            <p class="project-desc">
+                                Developed an intelligent sensor-based monitoring system designed to analyze soil moisture, ambient temperature, and humidity levels in real-time to maximize plant health and environmental conditions.
+                            </p>
+                            <div class="project-highlights">
+                                <span><i class="fa-solid fa-check"></i> Sensor Integration</span>
+                                <span><i class="fa-solid fa-check"></i> Real-time Telemetry</span>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tag">IoT</span>
+                                <span class="tag">Sensors</span>
+                                <span class="tag">Python/Embedded</span>
+                                <span class="tag">Hardware</span>
+                            </div>
+                            <div class="project-actions">
+                                <button onclick="openProjectDemo('plant')" class="btn btn-sm btn-primary">
+                                    <i class="fa-solid fa-sliders"></i> Interactive Demo
+                                </button>
+                                <a href="https://github.com/Yaswanth-1223" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-panel">
+                        <div class="project-card-banner project-bg-2">
+                            <div class="project-category"><i class="fa-solid fa-shield-halved"></i> Cybersecurity & AI</div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Virtual Voice Identity Vault</h3>
+                            <p class="project-desc">
+                                Designed a secure voice-based identity verification vault utilizing audio recognition algorithms to authenticate users biometric signatures and protect sensitive digital access.
+                            </p>
+                            <div class="project-highlights">
+                                <span><i class="fa-solid fa-check"></i> Voice Recognition</span>
+                                <span><i class="fa-solid fa-check"></i> Secure Auth</span>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tag">Voice Biometrics</span>
+                                <span class="tag">Security</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">Audio AI</span>
+                            </div>
+                            <div class="project-actions">
+                                <button onclick="openProjectDemo('voice')" class="btn btn-sm btn-primary">
+                                    <i class="fa-solid fa-microphone-lines"></i> Interactive Demo
+                                </button>
+                                <a href="https://github.com/Yaswanth-1223" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Achievements -->
+        <section id="certifications" class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Recognition & Honors</span>
+                    <h2 class="section-title">Certifications & <span class="gradient-text">Achievements</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="cert-achieve-grid">
+                    <!-- Certifications -->
+                    <div class="glass-panel cert-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-award"></i>
+                            <h3>Certifications</h3>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge silver-elite">
+                                <i class="fa-solid fa-medal"></i> Silver + Elite
+                            </div>
+                            <h4>NPTEL - Internet of Things</h4>
+                            <p>Certified by NPTEL with top Elite + Silver grade distinction.</p>
+                        </div>
+                        <hr class="card-divider">
+                        <div class="cert-item">
+                            <div class="cert-badge">
+                                <i class="fa-solid fa-certificate"></i> Specialized
+                            </div>
+                            <h4>IoT in Edge Computing</h4>
+                            <p>Hands-on certification focusing on edge device processing & smart architecture.</p>
+                        </div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="glass-panel cert-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-trophy"></i>
+                            <h3>Achievements</h3>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge gold">
+                                <i class="fa-solid fa-file-powerpoint"></i> Paper Presentation
+                            </div>
+                            <h4>Presented Technical Paper at KIT</h4>
+                            <p>Successfully researched and presented a technical paper at KIT, Coimbatore.</p>
+                        </div>
+                        <hr class="card-divider">
+                        <div class="cert-item">
+                            <div class="cert-badge purple">
+                                <i class="fa-solid fa-code"></i> Competitive Coding
+                            </div>
+                            <h4>LeetCode Problem Solver</h4>
+                            <p>Consistently solving algorithmic challenges on LeetCode to sharpen problem-solving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section dark-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Academic Journey</span>
+                    <h2 class="section-title">Education <span class="gradient-text">Background</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="education-grid">
+                    <!-- College -->
+                    <div class="edu-card glass-panel">
+                        <div class="edu-year">2024 - 2028</div>
+                        <h3 class="edu-degree">Bachelor of Engineering (B.E.)</h3>
+                        <h4 class="edu-field">Computer Science and Engineering</h4>
+                        <div class="edu-school"><i class="fa-solid fa-building-columns"></i> Dr. N.G.P. Institute of Technology, Coimbatore</div>
+                        <div class="edu-grade"><i class="fa-solid fa-star"></i> CGPA: <strong>7.5 / 10</strong></div>
+                    </div>
+
+                    <!-- 12th -->
+                    <div class="edu-card glass-panel">
+                        <div class="edu-year">2023 - 2024</div>
+                        <h3 class="edu-degree">Higher Secondary (12th Grade)</h3>
+                        <h4 class="edu-field">Senior Secondary School</h4>
+                        <div class="edu-school"><i class="fa-solid fa-school"></i> Velalar Vidhyallayaa Senior Secondary School, Erode</div>
+                        <div class="edu-grade"><i class="fa-solid fa-percent"></i> Score: <strong>71%</strong></div>
+                    </div>
+
+                    <!-- 10th -->
+                    <div class="edu-card glass-panel">
+                        <div class="edu-year">2021 - 2022</div>
+                        <h3 class="edu-degree">Secondary School (10th Grade)</h3>
+                        <h4 class="edu-field">Secondary School</h4>
+                        <div class="edu-school"><i class="fa-solid fa-school"></i> Velalar Vidhyallayaa Senior Secondary School, Erode</div>
+                        <div class="edu-grade"><i class="fa-solid fa-percent"></i> Score: <strong>65.4%</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Terminal (Developer Vibe) -->
+        <section id="terminal" class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">For Developers & Recruiters</span>
+                    <h2 class="section-title">Interactive <span class="gradient-text">Terminal</span></h2>
+                    <p class="section-desc">Type <code>help</code>, <code>skills</code>, <code>projects</code>, <code>resume</code>, or <code>contact</code> to explore.</p>
+                </div>
+
+                <div class="terminal-container glass-panel">
+                    <div class="terminal-header">
+                        <div class="window-controls">
+                            <span class="ctrl red"></span>
+                            <span class="ctrl yellow"></span>
+                            <span class="ctrl green"></span>
+                        </div>
+                        <div class="terminal-title">yaswanth@portfolio:~</div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-line">Welcome to Yaswanth S S Interactive CLI v1.0.0</div>
+                        <div class="terminal-line">Type <span class="term-cmd">'help'</span> to see available commands.</div>
+                    </div>
+                    <div class="terminal-input-line">
+                        <span class="term-prompt">yaswanth@portfolio:~$</span>
+                        <input type="text" id="terminal-input" placeholder="type command..." autocomplete="off">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section dark-section">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+                    <p class="section-desc">Direct email messages will be delivered straight to my real email address: <strong>yaswxnth0912@gmail.com</strong></p>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Quick Contact Cards -->
+                    <div class="contact-info-col">
+                        <div class="contact-card glass-panel glow-on-hover">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email Address</span>
+                                <a href="mailto:yaswxnth0912@gmail.com" class="contact-value">yaswxnth0912@gmail.com</a>
+                            </div>
+                            <button onclick="copyToClipboard('yaswxnth0912@gmail.com', 'Email copied!')" class="btn-icon" title="Copy Email">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="contact-card glass-panel glow-on-hover">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone / Mobile</span>
+                                <a href="tel:+919384915147" class="contact-value">+91 9384915147</a>
+                            </div>
+                            <button onclick="copyToClipboard('+919384915147', 'Phone copied!')" class="btn-icon" title="Copy Phone">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="contact-card glass-panel glow-on-hover">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Coimbatore, Tamil Nadu, India</span>
+                            </div>
+                        </div>
+
+                        <div class="social-box glass-panel">
+                            <h4>Social Networks</h4>
+                            <div class="social-links-grid">
+                                <a href="https://www.linkedin.com/in/yaswanth-ss-271593386" target="_blank" rel="noopener" class="btn btn-outline btn-block">
+                                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://github.com/Yaswanth-1223" target="_blank" rel="noopener" class="btn btn-outline btn-block">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Email Form via FormSubmit -->
+                    <div class="contact-form-col glass-panel">
+                        <h3>Send Email Direct to Yaswanth</h3>
+                        <form id="contact-form" action="https://formsubmit.co/yaswxnth0912@gmail.com" method="POST" onsubmit="handleFormSubmit(event)">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_subject" value="New Portfolio Contact Message for Yaswanth S S">
+
+                            <div class="form-group">
+                                <label for="sender-name">Your Name</label>
+                                <input type="text" id="sender-name" name="Name" placeholder="e.g., John Doe" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sender-email">Your Email Address</label>
+                                <input type="email" id="sender-email" name="Email" placeholder="e.g., john@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message-subject">Subject</label>
+                                <input type="text" id="message-subject" name="Subject" placeholder="Internship Opportunity / Inquiry" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message-body">Message</label>
+                                <textarea id="message-body" name="Message" rows="4" placeholder="Hello Yaswanth, I saw your portfolio and would like to discuss..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-lg glow-effect">
+                                <i class="fa-solid fa-paper-plane"></i> Send Email to yaswxnth0912@gmail.com
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 <strong>Yaswanth S S</strong>. Designed & Built with passion.</p>
+            <div class="footer-links">
+                <a href="mailto:yaswxnth0912@gmail.com"><i class="fa-solid fa-envelope"></i> yaswxnth0912@gmail.com</a>
+                <a href="tel:+919384915147"><i class="fa-solid fa-phone"></i> +91 9384915147</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-file-pdf"></i> Yaswanth S S - Resume</h3>
+                <button class="modal-close" onclick="closeResumeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="resume-preview-body">
+                <div class="resume-preview-card">
+                    <h2>YASWANTH S S</h2>
+                    <p class="resume-sub">B.E. COMPUTER SCIENCE AND ENGINEERING | Dr. N.G.P. Institute of Technology</p>
+                    <p><strong>Email:</strong> yaswxnth0912@gmail.com | <strong>Phone:</strong> +91 9384915147</p>
+                    <p><strong>LinkedIn:</strong> linkedin.com/in/yaswanth-ss-271593386 | <strong>GitHub:</strong> github.com/Yaswanth-1223</p>
+                    <hr>
+                    <h4>CAREER OBJECTIVE</h4>
+                    <p>Computer Science and Engineering student with strong foundation in Java, Python, C, C++, HTML, and SQL. Eager to contribute technical & problem-solving skills.</p>
+                    <h4>EDUCATION</h4>
+                    <ul>
+                        <li><strong>B.E. Computer Science & Engineering</strong> (2024-2028) - CGPA: 7.5 / 10</li>
+                        <li><strong>Higher Secondary (12th)</strong> (2023-2024) - 71%</li>
+                        <li><strong>Secondary (10th)</strong> (2021-2022) - 65.4%</li>
+                    </ul>
+                    <h4>SKILLS & CERTIFICATIONS</h4>
+                    <p><strong>Languages:</strong> Java, Python, C, C++, JavaScript | <strong>Database:</strong> SQL | <strong>Certifications:</strong> NPTEL IoT (Silver + Elite)</p>
+                    <h4>PROJECTS & INTERNSHIP</h4>
+                    <p><strong>Web Development Intern @ NxtLogic Software Solutions</strong></p>
+                    <p><strong>Projects:</strong> Plant Health Monitoring System (IoT) & Virtual Voice Identity Vault</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="downloadResume()" class="btn btn-primary glow-effect">
+                    <i class="fa-solid fa-download"></i> Download Resume File (PDF/HTML)
+                </button>
+                <button onclick="closeResumeModal()" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Project Demo Modal -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h3 id="project-modal-title">Project Interactive Preview</h3>
+                <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="project-modal-body">
+                <!-- Interactive simulation content -->
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeProjectModal()" class="btn btn-secondary">Close Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
